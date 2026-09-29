@@ -41,7 +41,8 @@
     <footer class="footer"><span><strong>CallPilot</strong> · AI reception for businesses that cannot miss calls</span><span>Demo environment</span></footer>
   </div>
   <script type="module">
-    import Vapi from 'https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/+esm';
+    import * as VapiModule from 'https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/+esm';
+    const Vapi = VapiModule.default?.default ?? VapiModule.default ?? VapiModule;
     const publicKey='597584b7-1bad-4afd-a447-9b2e2f6da73a';
     const assistantId='c77d2534-9df2-404d-869e-b66254deca68';
     const vapi=new Vapi(publicKey);
